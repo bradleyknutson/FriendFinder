@@ -17,7 +17,7 @@ function findFriend(user){
     friends.forEach(person => {
         let personScoreDifference = 0;
         for(let i = 0; i<person.scores.length; i++) {
-            personScoreDifference += Math.abs(person.scores[i] - user.scores[i]);
+            personScoreDifference += Math.abs(parseInt(person.scores[i]) - parseInt(user.scores[i]));
         }
         if(personScoreDifference < friendScoreDifference){
             friendScoreDifference = personScoreDifference;
