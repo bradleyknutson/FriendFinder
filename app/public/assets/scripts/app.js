@@ -14,16 +14,21 @@ $(document).ready(() => {
             checkFriend(friendObj);
         }else{
             //Show missing answers
-            console.log('stopit');
+            $(`.modal-body`).append(`<h3>Please answer all questions`);
+            $(`#friendModal`).modal(`show`);
         }
     });
 
+    $('#modal_close').on('click', (e) => {
+        $('.modal-body').empty();
+    });
 
 });
 
 function checkFriend(friendObj){
     $.post(`/api/friends`, friendObj, (data, status) => {
         //Return closest matched friend as data
-        console.log(data, status);
+        $('.modal-body').append(`<h3>Your Best Friend Is ...<h3><h5>${data.name}!!!</h5><img src="${data.photo}" width="100%">`);
+        $('#friendModal').modal('show');
     });
 }

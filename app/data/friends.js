@@ -20,6 +20,7 @@ function findFriend(user){
             personScoreDifference += Math.abs(person.scores[i] - user.scores[i]);
         }
         if(personScoreDifference < friendScoreDifference){
+            friendScoreDifference = personScoreDifference;
             friend = person;
         }
     });
