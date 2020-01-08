@@ -10,7 +10,7 @@ $(function() {
         // on the right side
         name: {
             required: true,
-            minlength: 3
+            minlength: 2
         },
         photo: {
             required: true,
