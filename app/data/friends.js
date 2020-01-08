@@ -1,4 +1,10 @@
-let friends = [];
+let friends = [
+    {
+        name: 'Megaman',
+        photo: 'https://vignette.wikia.nocookie.net/megaman/images/3/30/MM11-MegaMan.png/revision/latest/scale-to-width-down/700?cb=20190127075055',
+        scores: ["5", "2", "3", "2", "2", "2", "4", "3", "2", "5"]
+    }
+];
 
 function findFriend(user){
     let friendScoreDifference = 51;
