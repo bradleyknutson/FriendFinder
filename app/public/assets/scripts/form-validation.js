@@ -35,7 +35,7 @@ $(function() {
       },
       // Specify validation error messages
       messages: {
-        name: "Please enter your name",
+        name: "Please enter your full name",
         email: "Please enter a valid email address"
       },
       // Make sure the form is submitted to the destination defined
