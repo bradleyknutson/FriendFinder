@@ -4,7 +4,7 @@
 Friend Finder is a site used to find your closest friend!  Our survey consists of 10 personality questions.  Once answered you will be shown your closest match according to an exhaustive algorithm.  You are able to view the current list of all friends using the built-in API.
 
 ## Demo
-![FriendFinder Screenshot](https://drive.google.com/file/d/10yYr5GAK0u0kgkDAS0YnZVRYtKdDace3/view?usp=sharing)
+![FriendFinder Screenshot](https://i.imgur.com/H2jaJqr.png)
 
 ## Installation
 * Clone FriendFinder repository.
