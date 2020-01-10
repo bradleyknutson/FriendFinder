@@ -1,14 +1,13 @@
 $(document).ready(() => {
+    $('.chosen-select').chosen();
     $('#submit').on('click', (e) => {
         e.preventDefault();
         let name = $('#name').val().trim();
         let photo = $('#photo').val().trim();
         let answersArr = [$('#q1').val(), $('#q2').val(), $('#q3').val(), $('#q4').val(), $('#q5').val(), $('#q6').val(), $('#q7').val(), $('#q8').val(), $('#q9').val(), $('#q10').val()];
-        if(!answersArr.includes('') && name !== '' && photo !== ''){
+        if(!answersArr.includes(null) && !answersArr.includes('') && name !== '' && photo !== ''){
             $('#name, #photo, #q1, #q2, #q3, #q4, #q5, #q6, #q7, #q8, #q9, #q10').val('');
-            for(let i=0; i < answersArr.length; i++){
-                answersArr[i] = parseInt(answersArr[i]);
-            }
+            $('.chosen-select').val('Select an Option').trigger('chosen:updated');
             let friendObj = {
                 name: name,
                 photo: photo,

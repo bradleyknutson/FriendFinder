@@ -6,7 +6,11 @@ module.exports = (app) => {
     });
 
     app.post(`/api/friends`, (req, res) => {
-        res.json(friends.findFriend(req.body));
-        friends.friends.push(req.body);
+        newFriend = req.body;
+        for(let i =0; i < newFriend.scores.length; i++){
+            newFriend.scores[i] = parseInt(newFriend.scores[i]);
+        }
+        res.json(friends.findFriend(newFriend));
+        friends.friends.push(newFriend);
     });
 }
